@@ -7,6 +7,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -21,6 +22,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Run tests
+      - name: Run autograder tests
         run: |
-          pytest -q
+          pytest
