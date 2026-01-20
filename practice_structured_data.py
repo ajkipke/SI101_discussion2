@@ -33,6 +33,14 @@ movies = [
 # - last_rating
 
 # Write your code below
+first_title = movies[0]["title"]
+print(first_title)
+second_year = movies[1]["year"]
+print(second_year)
+first_ratings = movies[0]["ratings"]
+print(first_ratings)
+last_rating = movies[1]["ratings"][-1]
+print(last_rating)
 
 
 
@@ -46,6 +54,10 @@ movies = [
 # 3. Change the title of the second movie to "The Matrix Reloaded"
 
 # Write your code below
+movies[0]["year"] = 2011
+movies[1]["ratings"].append(10)
+movies[1]["title"] = "The Matrix Reloaded"
+print(movies[1])
 
 
 
@@ -59,7 +71,7 @@ movies = [
 # - converts the title to title case
 
 # Write your code below
-
+clean_title = movies[0]["title"].title().strip()
 
 
 
@@ -71,7 +83,9 @@ movies = [
 # - the last character of clean_title
 
 # Write your code below
+bookends = clean_title[0] + clean_title[-1]
 
+print(bookends)
 
 
 
@@ -86,8 +100,8 @@ movies = [
 
 # Write your code below
 
-
+summary = f"Movie: {clean_title} ({movies[0]["year"]})"
 
 
 # Optional: print summary to check your work
-# print(summary)
+print(summary)
